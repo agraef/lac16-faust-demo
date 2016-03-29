@@ -22,12 +22,14 @@ clean:
 
 install-lv2: $(lv2)
 	rm -rf $(addprefix ~/.lv2/, $(lv2))
+	mkdir -p ~/.lv2
 	cp -r $(lv2) ~/.lv2
 
 uninstall-lv2:
 	rm -rf $(addprefix ~/.lv2/, $(lv2))
 
 install-vst: $(vst)
+	mkdir -p ~/.vst
 	cp $(vst) ~/.vst
 
 uninstall-vst:
