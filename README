@@ -4,7 +4,7 @@ ex01.dsp: basic sine generator
 Minimalistic, just a sine oscillator with a frequency control. Note that the
 dsp is implemented by the 'process' function (Faust's 'main') and the controls
 (a.k.a. "Faust UI elements") are special signal-valued functions. Create a
-MIDI track in Ardour and add the plugin there.
+MIDI track in Qtractor and add the plugin there.
 
 ex02.dsp: add requisite meta information
 
