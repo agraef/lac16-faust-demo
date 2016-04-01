@@ -1,0 +1,29 @@
+#N canvas 391 334 450 300 10;
+#X obj 22 51 inlet;
+#X obj 22 104 ctlout;
+#X obj 58 124 noteout;
+#X obj 22 76 route ctl note polytouch pgm bend touch start cont stop
+;
+#X obj 94 102 polytouchout;
+#X obj 131 124 pgmout;
+#X obj 178 101 bendout;
+#X obj 203 122 touchout;
+#X msg 240 99 250;
+#X msg 276 98 251;
+#X msg 312 98 252;
+#X obj 312 119 midiout;
+#X text 25 9 This is a little helper patch which decodes MIDI messages
+in a symbolic format used by some pd-pure plugins.;
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 1 2 0;
+#X connect 3 2 4 0;
+#X connect 3 3 5 0;
+#X connect 3 4 6 0;
+#X connect 3 5 7 0;
+#X connect 3 6 8 0;
+#X connect 3 7 9 0;
+#X connect 3 8 10 0;
+#X connect 8 0 11 0;
+#X connect 9 0 11 0;
+#X connect 10 0 11 0;
