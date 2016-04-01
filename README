@@ -81,8 +81,8 @@ and VST plugins are all automatable. To do this in Qtractor, use the
 automation menu in the track head to add automation lanes and edit the
 automation curves there. Qtractor also allows you to assign a MIDI controller
 to a plugin parameter by right-clicking on the control in the plugin's
-properties dialog. Qtractor also allows you to configure a separate MIDI
-control input for that.
+properties dialog. You can also configure a separate MIDI control input for
+that.
 
 NOTE: There's an important difference between DAW-based and direct MIDI
 control. Faust-generated LV2 and VST plugins are fully *multi-timbral*, i.e.,
