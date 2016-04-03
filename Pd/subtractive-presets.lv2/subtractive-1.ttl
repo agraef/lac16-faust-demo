@@ -11,33 +11,33 @@
 	lv2:appliesTo <http://faustlv2.bitbucket.org/subtractive> ;
 	rdfs:label "subtractive-1" ;
 	lv2:port [
-		lv2:symbol "attack" ;
+		lv2:symbol "attack_4" ;
 		pset:value 0.01
 	] , [
-		lv2:symbol "cutoff" ;
+		lv2:symbol "cutoff_2" ;
 		pset:value 4.0
 	] , [
-		lv2:symbol "decay" ;
+		lv2:symbol "decay_5" ;
 		pset:value 0.30000001
 	] , [
-		lv2:symbol "nvoices" ;
-		pset:value 8.0
-	] , [
-		lv2:symbol "pan" ;
+		lv2:symbol "pan_0" ;
 		pset:value 0.40000001
 	] , [
-		lv2:symbol "release" ;
+		lv2:symbol "polyphony" ;
+		pset:value 8.0
+	] , [
+		lv2:symbol "release_7" ;
 		pset:value 0.2
 	] , [
-		lv2:symbol "res" ;
+		lv2:symbol "res_3" ;
 		pset:value 7.0
 	] , [
-		lv2:symbol "sustain" ;
+		lv2:symbol "sustain_6" ;
 		pset:value 0.2
 	] , [
 		lv2:symbol "tuning" ;
 		pset:value 0.0
 	] , [
-		lv2:symbol "vol" ;
+		lv2:symbol "vol_1" ;
 		pset:value 0.30000001
 	] .
