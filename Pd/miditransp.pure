@@ -1,0 +1,4 @@
+
+miditransp k (note n v c) = note (n+k) v c;
+miditransp k (polytouch v n c) = polytouch v (n+k) c;
+miditransp k msg = msg otherwise;

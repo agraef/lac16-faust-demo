@@ -1,0 +1,2 @@
+
+midifilter n msg@(_ m) = if n==m then msg else ();

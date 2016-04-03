@@ -1,0 +1,279 @@
+#N canvas 258 29 1049 598 10;
+#X obj 16 16 midi-input;
+#X obj 16 258 lv2plugin~ flanger;
+#X obj 16 328 lv2plugin~ amp;
+#X obj 16 231 print;
+#X msg 29 40 listplugins;
+#X msg 65 89 info;
+#X obj 150 41 hsl 128 15 0 1 0 0 empty pan empty -2 -8 0 10 -262144
+-1 -1 5080 1;
+#X msg 147 61 control pan \$1;
+#N canvas 433 184 450 300 subtractive 0;
+#X obj 10 30 hsl 128 15 0 1 0 0 subtractive-pan-0 subtractive-pan-0
+pan -2 -6 0 10 -262144 -1 -1 7620 1;
+#X obj 160 30 nbx 5 14 0 1 0 0 subtractive-pan-0 subtractive-pan-0
+empty 0 -6 0 10 -262144 -1 -1 0.6 256 0;
+#X obj 10 60 hsl 128 15 0 1 0 0 subtractive-vol-1 subtractive-vol-1
+vol -2 -6 0 10 -262144 -1 -1 3810 1;
+#X obj 160 60 nbx 5 14 0 1 0 0 subtractive-vol-1 subtractive-vol-1
+empty 0 -6 0 10 -262144 -1 -1 0.3 256 0;
+#X obj 10 90 hsl 128 15 1 20 0 0 subtractive-cutoff-2 subtractive-cutoff-2
+cutoff -2 -6 0 10 -262144 -1 -1 6684 1;
+#X obj 160 90 nbx 5 14 1 20 0 0 subtractive-cutoff-2 subtractive-cutoff-2
+empty 0 -6 0 10 -262144 -1 -1 11 256 0;
+#X obj 10 120 hsl 128 15 0 20 0 0 subtractive-res-3 subtractive-res-3
+res -2 -6 0 10 -262144 -1 -1 635 1;
+#X obj 160 120 nbx 5 14 0 20 0 0 subtractive-res-3 subtractive-res-3
+empty 0 -6 0 10 -262144 -1 -1 1 256 0;
+#X obj 10 150 hsl 128 15 0 1 0 0 subtractive-attack-4 subtractive-attack-4
+attack -2 -6 0 10 -262144 -1 -1 127 1;
+#X obj 160 150 nbx 5 14 0 1 0 0 subtractive-attack-4 subtractive-attack-4
+empty 0 -6 0 10 -262144 -1 -1 0.01 256 0;
+#X obj 10 180 hsl 128 15 0 1 0 0 subtractive-decay-5 subtractive-decay-5
+decay -2 -6 0 10 -262144 -1 -1 3810 1;
+#X obj 160 180 nbx 5 14 0 1 0 0 subtractive-decay-5 subtractive-decay-5
+empty 0 -6 0 10 -262144 -1 -1 0.3 256 0;
+#X obj 10 210 hsl 128 15 0 1 0 0 subtractive-sustain-6 subtractive-sustain-6
+sustain -2 -6 0 10 -262144 -1 -1 6350 1;
+#X obj 160 210 nbx 5 14 0 1 0 0 subtractive-sustain-6 subtractive-sustain-6
+empty 0 -6 0 10 -262144 -1 -1 0.5 256 0;
+#X obj 10 240 hsl 128 15 0 1 0 0 subtractive-release-7 subtractive-release-7
+release -2 -6 0 10 -262144 -1 -1 2540 1;
+#X obj 160 240 nbx 5 14 0 1 0 0 subtractive-release-7 subtractive-release-7
+empty 0 -6 0 10 -262144 -1 -1 0.2 256 0;
+#X obj 10 270 hsl 128 15 1 16 0 0 subtractive-nvoices-11 subtractive-nvoices-11
+nvoices -2 -6 0 10 -262144 -1 -1 5927 1;
+#X obj 160 270 nbx 5 14 1 16 0 0 subtractive-nvoices-11 subtractive-nvoices-11
+empty 0 -6 0 10 -262144 -1 -1 8 256 0;
+#X obj 10 300 hsl 128 15 0 5 0 0 subtractive-tuning-12 subtractive-tuning-12
+tuning -2 -6 0 10 -262144 -1 -1 0 1;
+#X obj 160 300 nbx 5 14 0 5 0 0 subtractive-tuning-12 subtractive-tuning-12
+empty 0 -6 0 10 -262144 -1 -1 0 256 0;
+#X obj 197 3 bng 15 250 50 1 subtractive-init subtractive-init empty
+0 -6 0 10 -262144 -1 -1;
+#X obj 217 3 tgl 15 1 subtractive-active subtractive-active empty 0
+-6 0 10 -262144 -1 -1 1 1;
+#X coords 0 -1 1 1 235 330 1 0 0;
+#X restore 558 15 pd subtractive;
+#X obj 16 207 lv2plugin~ subtractive;
+#N canvas 433 184 450 300 flanger 0;
+#X obj 10 30 hsl 128 15 0 0.04 0 0 flanger-delay-0 flanger-delay-0
+delay -2 -6 0 10 -262144 -1 -1 635 1;
+#X obj 160 30 nbx 5 14 0 0.04 0 0 flanger-delay-0 flanger-delay-0 empty
+0 -6 0 10 -262144 -1 -1 0.002 256 0;
+#X obj 10 60 hsl 128 15 0 1 0 0 flanger-depth-1 flanger-depth-1 depth
+-2 -6 0 10 -262144 -1 -1 6350 1;
+#X obj 160 60 nbx 5 14 0 1 0 0 flanger-depth-1 flanger-depth-1 empty
+0 -6 0 10 -262144 -1 -1 0.5 256 0;
+#X obj 10 90 hsl 128 15 0 1 0 0 flanger-feedback-2 flanger-feedback-2
+feedback -2 -6 0 10 -262144 -1 -1 1270 1;
+#X obj 160 90 nbx 5 14 0 1 0 0 flanger-feedback-2 flanger-feedback-2
+empty 0 -6 0 10 -262144 -1 -1 0.1 256 0;
+#X obj 10 120 hsl 128 15 0 10 0 0 flanger-freq-3 flanger-freq-3 freq
+-2 -6 0 10 -262144 -1 -1 2540 1;
+#X obj 160 120 nbx 5 14 0 10 0 0 flanger-freq-3 flanger-freq-3 empty
+0 -6 0 10 -262144 -1 -1 2 256 0;
+#X obj 10 150 hsl 128 15 0 1 0 0 flanger-level-4 flanger-level-4 level
+-2 -6 0 10 -262144 -1 -1 12700 1;
+#X obj 160 150 nbx 5 14 0 1 0 0 flanger-level-4 flanger-level-4 empty
+0 -6 0 10 -262144 -1 -1 1 256 0;
+#X obj 10 180 hsl 128 15 0 1 0 0 flanger-stereo-5 flanger-stereo-5
+stereo -2 -6 0 10 -262144 -1 -1 12700 1;
+#X obj 160 180 nbx 5 14 0 1 0 0 flanger-stereo-5 flanger-stereo-5 empty
+0 -6 0 10 -262144 -1 -1 1 256 0;
+#X obj 197 3 bng 15 250 50 1 flanger-init flanger-init empty 0 -6 0
+10 -262144 -1 -1;
+#X obj 217 3 tgl 15 1 flanger-active flanger-active empty 0 -6 0 10
+-262144 -1 -1 1 1;
+#X coords 0 -1 1 1 235 210 1 0 0;
+#X restore 557 352 pd flanger;
+#N canvas 433 184 450 300 amp 0;
+#X obj 10 30 hsl 128 15 -20 20 0 0 amp-bass-0 amp-bass-0 bass -2 -6
+0 10 -262144 -1 -1 6350 1;
+#X obj 160 30 nbx 5 14 -20 20 0 0 amp-bass-0 amp-bass-0 empty 0 -6
+0 10 -262144 -1 -1 0 256 0;
+#X obj 10 60 hsl 128 15 -20 20 0 0 amp-treble-1 amp-treble-1 treble
+-2 -6 0 10 -262144 -1 -1 6350 1;
+#X obj 160 60 nbx 5 14 -20 20 0 0 amp-treble-1 amp-treble-1 empty 0
+-6 0 10 -262144 -1 -1 0 256 0;
+#X obj 10 90 hsl 128 15 -96 10 0 0 amp-gain-2 amp-gain-2 gain -2 -6
+0 10 -262144 -1 -1 11502 1;
+#X obj 160 90 nbx 5 14 -96 10 0 0 amp-gain-2 amp-gain-2 empty 0 -6
+0 10 -262144 -1 -1 0 256 0;
+#X obj 10 120 hsl 128 15 -1 1 0 0 amp-balance-3 amp-balance-3 balance
+-2 -6 0 10 -262144 -1 -1 6350 1;
+#X obj 160 120 nbx 5 14 -1 1 0 0 amp-balance-3 amp-balance-3 empty
+0 -6 0 10 -262144 -1 -1 0 256 0;
+#X obj 10 150 hsl 128 15 -96 10 0 0 amp-left-4 amp-left-4 left -2 -6
+0 10 -233017 -1 -1 8401 1;
+#X obj 160 150 nbx 5 14 -96 10 0 0 amp-left-4 amp-left-4 empty 0 -6
+0 10 -233017 -1 -1 -25.8825 256 0;
+#X obj 10 180 hsl 128 15 -96 10 0 0 amp-right-5 amp-right-5 right -2
+-6 0 10 -233017 -1 -1 9192 1;
+#X obj 160 180 nbx 5 14 -96 10 0 0 amp-right-5 amp-right-5 empty 0
+-6 0 10 -233017 -1 -1 -19.2795 256 0;
+#X obj 197 3 bng 15 250 50 1 amp-init amp-init empty 0 -6 0 10 -262144
+-1 -1;
+#X obj 217 3 tgl 15 1 amp-active amp-active empty 0 -6 0 10 -262144
+-1 -1 1 1;
+#X coords 0 -1 1 1 235 210 1 0 0;
+#X restore 799 380 pd amp;
+#N canvas 0 50 450 300 (subpatch) 0;
+#X array scope-l 1764 float 0 black #008b66;
+#X array scope-r 1764 float 0 black #a10034;
+#X coords 0 0.5 1763 -0.5 300 180 1;
+#X restore 242 380 graph;
+#X obj 56 429 tabwrite~ scope-l;
+#X obj 96 452 tabwrite~ scope-r;
+#X obj 66 406 dac~;
+#X obj 178 371 tgl 15 0 empty scope empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 178 391 metro 40;
+#X msg 145 115 preset subtractive-2;
+#X msg 145 91 preset subtractive-1;
+#X msg 41 64 listpresets;
+#X obj 164 153 hradio 15 1 0 6 empty empty tuning 0 -8 0 10 -262144
+-1 -1 0;
+#X msg 164 173 control tuning \$1;
+#N canvas 433 184 450 300 zita_rev1 0;
+#X obj 10 30 hsl 128 15 20 100 0 0 zita-rev1-In-Delay-0 zita-rev1-In-Delay-0
+In-Delay -2 -6 0 10 -262144 -1 -1 6350 1;
+#X obj 160 30 nbx 5 14 20 100 0 0 zita-rev1-In-Delay-0 zita-rev1-In-Delay-0
+empty 0 -6 0 10 -262144 -1 -1 60 256 0;
+#X obj 10 60 hsl 128 15 50 1000 0 0 zita-rev1-LF-X-1 zita-rev1-LF-X-1
+LF-X -2 -6 0 10 -262144 -1 -1 2005 1;
+#X obj 160 60 nbx 5 14 50 1000 0 0 zita-rev1-LF-X-1 zita-rev1-LF-X-1
+empty 0 -6 0 10 -262144 -1 -1 200 256 0;
+#X obj 10 90 hsl 128 15 1 8 0 0 zita-rev1-Low-RT60-2 zita-rev1-Low-RT60-2
+Low-RT60 -2 -6 0 10 -262144 -1 -1 3629 1;
+#X obj 160 90 nbx 5 14 1 8 0 0 zita-rev1-Low-RT60-2 zita-rev1-Low-RT60-2
+empty 0 -6 0 10 -262144 -1 -1 3 256 0;
+#X obj 10 120 hsl 128 15 1 8 0 0 zita-rev1-Mid-RT60-3 zita-rev1-Mid-RT60-3
+Mid-RT60 -2 -6 0 10 -262144 -1 -1 1814 1;
+#X obj 160 120 nbx 5 14 1 8 0 0 zita-rev1-Mid-RT60-3 zita-rev1-Mid-RT60-3
+empty 0 -6 0 10 -262144 -1 -1 2 256 0;
+#X obj 10 150 hsl 128 15 1500 23520 0 0 zita-rev1-HF-Damping-4 zita-rev1-HF-Damping-4
+HF-Damping -2 -6 0 10 -262144 -1 -1 2595 1;
+#X obj 160 150 nbx 5 14 1500 23520 0 0 zita-rev1-HF-Damping-4 zita-rev1-HF-Damping-4
+empty 0 -6 0 10 -262144 -1 -1 6000 256 0;
+#X obj 10 180 hsl 128 15 40 2500 0 0 zita-rev1-Eq1-Freq-5 zita-rev1-Eq1-Freq-5
+Eq1-Freq -2 -6 0 10 -262144 -1 -1 1420 1;
+#X obj 160 180 nbx 5 14 40 2500 0 0 zita-rev1-Eq1-Freq-5 zita-rev1-Eq1-Freq-5
+empty 0 -6 0 10 -262144 -1 -1 315 256 0;
+#X obj 10 210 hsl 128 15 -15 15 0 0 zita-rev1-Eq1-Level-6 zita-rev1-Eq1-Level-6
+Eq1-Level -2 -6 0 10 -262144 -1 -1 6350 1;
+#X obj 160 210 nbx 5 14 -15 15 0 0 zita-rev1-Eq1-Level-6 zita-rev1-Eq1-Level-6
+empty 0 -6 0 10 -262144 -1 -1 0 256 0;
+#X obj 10 240 hsl 128 15 160 10000 0 0 zita-rev1-Eq2-Freq-7 zita-rev1-Eq2-Freq-7
+Eq2-Freq -2 -6 0 10 -262144 -1 -1 1729 1;
+#X obj 160 240 nbx 5 14 160 10000 0 0 zita-rev1-Eq2-Freq-7 zita-rev1-Eq2-Freq-7
+empty 0 -6 0 10 -262144 -1 -1 1500 256 0;
+#X obj 10 270 hsl 128 15 -15 15 0 0 zita-rev1-Eq2-Level-8 zita-rev1-Eq2-Level-8
+Eq2-Level -2 -6 0 10 -262144 -1 -1 6350 1;
+#X obj 160 270 nbx 5 14 -15 15 0 0 zita-rev1-Eq2-Level-8 zita-rev1-Eq2-Level-8
+empty 0 -6 0 10 -262144 -1 -1 0 256 0;
+#X obj 10 300 hsl 128 15 -1 1 0 0 zita-rev1-Dry-Wet-Mix-9 zita-rev1-Dry-Wet-Mix-9
+Dry-Wet-Mix -2 -6 0 10 -262144 -1 -1 6350 1;
+#X obj 160 300 nbx 5 14 -1 1 0 0 zita-rev1-Dry-Wet-Mix-9 zita-rev1-Dry-Wet-Mix-9
+empty 0 -6 0 10 -262144 -1 -1 0 256 0;
+#X obj 10 330 hsl 128 15 -70 40 0 0 zita-rev1-Level-10 zita-rev1-Level-10
+Level -2 -6 0 10 -262144 -1 -1 8750 1;
+#X obj 160 330 nbx 5 14 -70 40 0 0 zita-rev1-Level-10 zita-rev1-Level-10
+empty 0 -6 0 10 -262144 -1 -1 5.7874 256 0;
+#X obj 197 3 bng 15 250 50 1 zita-rev1-init zita-rev1-init empty 0
+-6 0 10 -262144 -1 -1;
+#X obj 217 3 tgl 15 1 zita-rev1-active zita-rev1-active empty 0 -6
+0 10 -262144 -1 -1 1 1;
+#X coords 0 -1 1 1 235 360 1 0 0;
+#X restore 799 15 pd zita_rev1;
+#X obj 16 302 lv2plugin~ zita_rev1;
+#X obj 190 214 midifilter 3;
+#N canvas 433 184 450 300 Bass 0;
+#X obj 10 30 hsl 128 15 20 1000 0 0 Bass-Modulation-Frequency-0 Bass-Modulation-Frequency-0
+Modulation-Frequency -2 -6 0 10 -262144 -1 -1 2592 1;
+#X obj 160 30 nbx 5 14 20 1000 0 0 Bass-Modulation-Frequency-0 Bass-Modulation-Frequency-0
+empty 0 -6 0 10 -262144 -1 -1 220 256 0;
+#X obj 10 60 hsl 128 15 0 4 0 0 Bass-Modulation-Type-1 Bass-Modulation-Type-1
+Modulation-Type -2 -6 0 10 -262144 -1 -1 0 1;
+#X obj 160 60 nbx 5 14 0 4 0 0 Bass-Modulation-Type-1 Bass-Modulation-Type-1
+empty 0 -6 0 10 -262144 -1 -1 0 256 0;
+#X obj 10 90 hsl 128 15 0 1 0 0 Bass-Nonlinearity-2 Bass-Nonlinearity-2
+Nonlinearity -2 -6 0 10 -262144 -1 -1 0 1;
+#X obj 160 90 nbx 5 14 0 1 0 0 Bass-Nonlinearity-2 Bass-Nonlinearity-2
+empty 0 -6 0 10 -262144 -1 -1 0 256 0;
+#X obj 10 120 hsl 128 15 0 1 0 0 Bass-Touch-Length-3 Bass-Touch-Length-3
+Touch-Length -2 -6 0 10 -262144 -1 -1 1905 1;
+#X obj 160 120 nbx 5 14 0 1 0 0 Bass-Touch-Length-3 Bass-Touch-Length-3
+empty 0 -6 0 10 -262144 -1 -1 0.15 256 0;
+#X obj 10 150 hsl 128 15 0 1 0 0 Bass-reverbGain-4 Bass-reverbGain-4
+reverbGain -2 -6 0 10 -262144 -1 -1 1740 1;
+#X obj 160 150 nbx 5 14 0 1 0 0 Bass-reverbGain-4 Bass-reverbGain-4
+empty 0 -6 0 10 -262144 -1 -1 0.137 256 0;
+#X obj 10 180 hsl 128 15 0.01 2 0 0 Bass-roomSize-5 Bass-roomSize-5
+roomSize -2 -6 0 10 -262144 -1 -1 4531 1;
+#X obj 160 180 nbx 5 14 0.01 2 0 0 Bass-roomSize-5 Bass-roomSize-5
+empty 0 -6 0 10 -262144 -1 -1 0.72 256 0;
+#X obj 10 210 hsl 128 15 0 1 0 0 Bass-pan-angle-6 Bass-pan-angle-6
+pan-angle -2 -6 0 10 -262144 -1 -1 9720 1;
+#X obj 160 210 nbx 5 14 0 1 0 0 Bass-pan-angle-6 Bass-pan-angle-6 empty
+0 -6 0 10 -262144 -1 -1 0.765354 256 0;
+#X obj 10 240 hsl 128 15 0 1 0 0 Bass-spatial-width-7 Bass-spatial-width-7
+spatial-width -2 -6 0 10 -262144 -1 -1 6350 1;
+#X obj 160 240 nbx 5 14 0 1 0 0 Bass-spatial-width-7 Bass-spatial-width-7
+empty 0 -6 0 10 -262144 -1 -1 0.5 256 0;
+#X obj 10 270 hsl 128 15 1 16 0 0 Bass-nvoices-11 Bass-nvoices-11 nvoices
+-2 -6 0 10 -262144 -1 -1 5927 1;
+#X obj 160 270 nbx 5 14 1 16 0 0 Bass-nvoices-11 Bass-nvoices-11 empty
+0 -6 0 10 -262144 -1 -1 8 256 0;
+#X obj 10 300 hsl 128 15 0 5 0 0 Bass-tuning-12 Bass-tuning-12 tuning
+-2 -6 0 10 -262144 -1 -1 0 1;
+#X obj 160 300 nbx 5 14 0 5 0 0 Bass-tuning-12 Bass-tuning-12 empty
+0 -6 0 10 -262144 -1 -1 0 256 0;
+#X obj 197 3 bng 15 250 50 1 Bass-init Bass-init empty 0 -6 0 10 -262144
+-1 -1;
+#X obj 217 3 tgl 15 1 Bass-active Bass-active empty 0 -6 0 10 -262144
+-1 -1 1 1;
+#X coords 0 -1 1 1 235 330 1 0 0;
+#X restore 315 15 pd Bass;
+#X obj 190 267 lv2plugin~ Bass;
+#X obj 56 371 +~;
+#X obj 97 370 +~;
+#X obj 190 236 miditransp (-12);
+#X obj 14 473 loadbang;
+#X msg 14 500 \; pd dsp 1 \; pan 0.4 \; zita control Level 0 \; scope
+1;
+#X obj 16 280 r zita;
+#X connect 0 0 9 0;
+#X connect 0 0 25 0;
+#X connect 1 1 24 1;
+#X connect 1 2 24 2;
+#X connect 2 1 28 0;
+#X connect 2 2 29 0;
+#X connect 4 0 9 0;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 9 0 3 0;
+#X connect 9 1 1 1;
+#X connect 9 2 1 2;
+#X connect 16 0 17 0;
+#X connect 17 0 13 0;
+#X connect 17 0 14 0;
+#X connect 18 0 9 0;
+#X connect 19 0 9 0;
+#X connect 20 0 9 0;
+#X connect 21 0 22 0;
+#X connect 22 0 9 0;
+#X connect 22 0 27 0;
+#X connect 24 1 2 1;
+#X connect 24 2 2 2;
+#X connect 25 0 30 0;
+#X connect 27 1 2 1;
+#X connect 27 2 2 2;
+#X connect 28 0 15 0;
+#X connect 28 0 13 0;
+#X connect 29 0 15 1;
+#X connect 29 0 14 0;
+#X connect 30 0 27 0;
+#X connect 31 0 32 0;
+#X connect 33 0 24 0;
