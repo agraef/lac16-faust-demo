@@ -1,2 +1,5 @@
 
+// Little helper external to filter MIDI messages in the lv2plugin~ format.
+// Takes a single argument, the MIDI channel number to be passed through.
+
 midifilter n msg@(_ m) = if n==m then msg else ();
